@@ -10,15 +10,57 @@ var ansiRegex = require('ansi-regex')();
 var topOffset = 3;
 var leftOffset = 17;
 var defaultGreeting =
-  '\n     _-----_' +
-  '\n    |       |    ' +
-  '\n    |' + chalk.red('--(o)--') + '|    ' +
-  '\n   `---------´   ' +
-  '\n    ' + chalk.yellow('(') + ' _' + chalk.yellow('´U`') + '_ ' + chalk.yellow(')') + '    ' +
-  '\n    /___A___\\    ' +
-  '\n     ' + chalk.yellow('|  ~  |') + '     ' +
-  '\n   __' + chalk.yellow('\'.___.\'') + '__   ' +
-  '\n ´   ' + chalk.red('`  |') + '° ' + chalk.red('´ Y') + ' ` ';
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFNII  8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFO      8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFZ        88FFFF8877      I$$ODFFFFFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8II            INFFFF8                ZFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFO                INFFFFO  I$$$I         7NFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFF$                  7FFFFFFFFFFFFFFDOI     INFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFF87 I                    IZZFFFFFFFFFFFFFFFDDI   7ZFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFZI                          8FFFFFFFFFFFFFFFFF7    DFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFNN7                            IDFFFFFFFFFFFFFFFFN    $FFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFD7I                              INFFFFFFFFFFFFFFFF$    NFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFZ                                  ODFFFFFFFFFFFFFFFII  $FFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFN$                                $NFFFFFFFFFFFFFF$I   FFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFD$                              IIFFFFFFFFFFFFFFZ7   FFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFNNO                             DFFFFFFFFFFFFZ7   NFF' + 
+  '\nFFFFFFFFFI IIIFFFFFFFFFFFFFFFFF$                           IFFFFFFFFFFFF$I   FFF' + 
+  '\nFFFFFFFF       I IFFFFFFFFFFFFFF8$I                         OFFFFFFFFFFF7I   FFF' + 
+  '\nFFFFND              NNNFFFFFFFFFFFFD$I                       88FFFFFFFFN    7FFF' + 
+  '\nFFF                      FFFFFFFFFFFFN$$                      IDFFFFFFF$    OFFF' + 
+  '\nFF                       IIFFFFFFFFFFFFFO                     IIFFFFFFF     NFFF' + 
+  '\n                              FFFFFFFFFFFNII                    8FFFFF8    IFFFF' + 
+  '\nFFI                            IINFFFFFFFFFFOO                 7FFFFF8     NFFFF' + 
+  '\nFFFFFFFI                            FFFFFFFFFF8                NFFFFFI   7$FFFFF' + 
+  '\nFFFFFFFFFFFF    I                   IFFFFFFFFFFNI            O8FFFFOO    ODFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFF                    IFFFFFFFFN$7       7NFFFFFI     NFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFF                  FFFFFFFFFF7    I7FFFFFFZ     OFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFDNFFFFFFFFFFFI                FFFFFFFFF7  I7FFFFFF8     7FFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFF$  IZFFFFFFFFFFF                FFFFFFFF77ZFFFFFF8     INFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFF$    FFFFFFFFFFFFFFFF             FFFFFFFFFFFFNII    ZZFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFF$    FFFFFFFFFFFFFFFFFF           IFFFFFFFFFFDII    ZFFFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFO    NFFFFFFFFFFFFFFFFFFFFI         NFFFFFFF8      $FFFFFFFFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFN    $FFFFFFFFFFFFFFFFFFFFFFF    FFFFFFFN77      ZFFFFFF8 FFFFFFFF' + 
+  '\nFFFFFFFFFFFFFFF7I  IFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8       Z$FFFFFF8  8FFFFFFF' + 
+  '\nFFFFFFFFFFFFFFF8Z   OFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFN$       8FFFFFF88   $NFFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFZ   $$NFFFFFFFFFFFFFFFFFFFFFFFD$7      I$8FFFFFFD$      8NFFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFZ     ZFFFFFFFFFFFFFFFFFF8$$        7DNFFFFFFFF7I      7$FFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFF$     IZDDFFFFFFFFFDD8$           OFFFFFFFFFFFD       I7FFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFF$         7$$$$$I             Z$NFFFFFFFFFFFFF$        NFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFOI                 IZZ8FFFFFFFFFNI   I FFFFOZ      $FFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFDZO$        77$ODFFFFFFFFFFFFFFF      FFFFFI     IFFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFNNNNFFFFFFFFFFFFFFFFFFFFFFFI    FFFFFO      NFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFI   FFFFFO     ZFFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF     FFFFFI    7FFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFN    FFFFZ     FFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7  DFFFFII   NFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFI   FFF8$  IOFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFI IFFFFZ   ZFF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF    FFFD$  $FF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFN   FF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7  NN' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFO 7FF' + 
+  '\nFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8ZFFF';
 
 module.exports = function (message, options) {
   message = (message || 'Welcome to Yeoman, ladies and gentlemen!').trim();
@@ -28,7 +70,7 @@ module.exports = function (message, options) {
    * What you're about to see may confuse you. And rightfully so. Here's an
    * explanation.
    *
-   * When yosay is given a string, we create a duplicate with the ansi styling
+   * When funnelenvysays is given a string, we create a duplicate with the ansi styling
    * sucked out. This way, the true length of the string is read by `pad` and
    * `wrap`, so they can correctly do their job without getting tripped up by
    * the "invisible" ansi. Along with the duplicated, non-ansi string, we store
