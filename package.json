@@ -1,7 +1,7 @@
 {
-  "name": "yosay",
+  "name": "funnelenvysays",
   "version": "1.0.3",
-  "description": "Tell Yeoman what to say",
+  "description": "Tell FunnelEnvy what to say",
   "license": "BSD",
   "keywords": [
     "cli",
@@ -14,7 +14,7 @@
     "message",
     "ansi"
   ],
-  "homepage": "http://yeoman.io",
+  "homepage": "http://funnelenvy.com.io",
   "author": "The Yeoman Team",
   "repository": "yeoman/yosay",
   "bin": {
