@@ -9,16 +9,17 @@
     "yeoman",
     "yo",
     "cowsay",
+    "yosay",
     "say",
     "box",
     "message",
     "ansi"
   ],
   "homepage": "http://funnelenvy.com.io",
-  "author": "The Yeoman Team",
-  "repository": "yeoman/yosay",
+  "author": "The Funnel Envy Team",
+  "repository": "funnelenvy/funnelenvysays",
   "bin": {
-    "yosay": "cli.js"
+    "funnelenvysays": "cli.js"
   },
   "files": [
     "index.js",
