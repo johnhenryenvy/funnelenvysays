@@ -9,13 +9,13 @@
     "yeoman",
     "yo",
     "cowsay",
-    "yosay",
+    "funnelenvysays",
     "say",
     "box",
     "message",
     "ansi"
   ],
-  "homepage": "http://funnelenvy.com.io",
+  "homepage": "http://funnelenvy.com",
   "author": "The Funnel Envy Team",
   "repository": "funnelenvy/funnelenvysays",
   "bin": {
