@@ -1,3 +1,4 @@
+//greeting
 module.exports =
 '              .               \n'+
 '             :::   ..`        \n'+
