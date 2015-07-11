@@ -9,7 +9,33 @@ var ansiRegex = require('ansi-regex')();
 
 var topOffset = 3;
 var leftOffset = 17;
-var defaultGreeting = require('./default-greeting');
+var defaultGreeting =
+'              .               \n'+
+'             :::   ..`        \n'+
+'            :::::  :::::      \n'+
+'          `:::::::     ,:`    \n'+
+'         ,::::::::,     `:    \n'+
+'        :::::::::::`     :.   \n'+
+'         :::::::::::     ,:   \n'+
+'           ::::::::::    ,:   \n'+
+'    @@#     `::::::::`   ::   \n'+
+'   @@@@@@     ::::::::   :,   \n'+
+' .@@@@@@@@@    .::::::, `:    \n'+
+'    ;@@@@@@@     :::::  ::    \n'+
+'        +@@@@@    :::  .,     \n'+
+'      `    @@@@,   :   ::     \n'+
+'      :,     @@@@     ::      \n'+
+'      :,       @@#  `::       \n'+
+'      .:           ,::  .     \n'+
+'       :.        `::,  .:,    \n'+
+'        ::     ,:::`   :::    \n'+
+'         ::::::::    .  ::    \n'+
+'            `        @  ::`   \n'+
+'                      @  :,   \n'+
+'                      `  ::   \n'+
+'                       @ `:   \n'+
+'                          :   \n'+
+'                          :   \n';
 module.exports = function (message, options) {
   message = (message || 'Welcome to Yeoman, ladies and gentlemen!').trim();
   options = options || {};
