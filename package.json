@@ -17,7 +17,7 @@
   ],
   "homepage": "http://funnelenvy.com",
   "author": "The Funnel Envy Team",
-  "repository": "funnelenvy/funnelenvysays",
+  "repository": "johnhenryenvy/funnelenvysays",
   "bin": {
     "funnelenvysays": "cli.js"
   },
